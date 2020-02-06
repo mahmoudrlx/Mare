@@ -1,0 +1,284 @@
+body{
+    background-color:#87CEEB;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+#sun{   
+    position: absolute;
+	top:0;
+	left:0;
+	right:0;                                                        
+	bottom:0;
+	margin: 200px 0 0 350px;  
+	width:70px;
+	height:70px;
+	border-radius:50%;	
+	background:white;
+	opacity:0.9;			
+    box-shadow: 0px 0px 40px 15px white;  
+
+}
+
+#ray-container
+{
+ 
+    animation: sun 120s infinite;
+    -moz-animation: sun 120s infinite;
+    -webkit-animation: sun 120s infinite;
+    position: absolute;
+    margin: auto;  
+      top:0px;
+      left:0;
+      right:0;
+      bottom:0;	
+    width:70px; 	
+
+}
+
+@keyframes sun {
+    0% { -webkit-transform: rotate(0deg); 
+            transform: rotate(0deg);}    
+    100% { -webkit-transform: rotate(360deg); 
+            transform: rotate(360deg);}
+  } 
+   
+.ray{
+    background:-webkit-linear-gradient(top,
+    rgba(255,255,255,0) 0%,
+    rgba(0,0,0,0.8) 50%,
+    rgba(0,0,0,0) 100%);
+    margin-left:10px;
+    border-radius:80% 80% 0 0;
+    position:absolute;
+    opacity:0.1;
+
+}
+
+.ray1{
+    height:170px;
+    width:30px;
+    transform: rotate(180deg);
+    top:-175px;
+    left: 15px;
+}  
+
+.ray2{
+    height:100px;
+    width:8px;
+    transform: rotate(220deg);
+    top:-90px;
+    left: 75px;
+} 
+
+.ray3{
+    height:170px;
+    width:50px;
+    transform: rotate(250deg);
+    top:-80px;
+    left: 100px;
+
+} 
+
+.ray4{
+    height:120px;
+    width:14px;
+    transform: rotate(305deg);
+    top:30px;
+    left: 100px;
+
+}
+.ray5{
+    height: 250px;
+    width: 30px;
+    transform: rotate(360deg);
+    top:70px;
+    left: 15px;
+} 
+
+.ray6{
+    height:120px;
+    width:20px;
+    transform: rotate(230deg);
+    top:30px;
+    left:-50px;
+}
+.ray6{
+    height:120px;
+    width:20px;
+    transform: rotate(230deg);
+    top:30px;
+    left:-50px;
+}
+
+.ray7{
+    height:180px;
+    width:40px;
+    transform: rotate(100deg);
+    top:-80px;
+    left:-120px;
+}
+.ray8{
+    height:100px;
+    width:20px;
+    transform: rotate(130deg);
+    top:-70px;
+    left:-40px;
+}
+
+#sea{
+    background-color: #015871;
+    min-width: 100%;
+    height: 5%;
+    position: absolute;
+    bottom: 0;
+    left:0;
+} 
+.wave{
+    background: url("./images/wave.svg")repeat-x;
+    min-width: 9000px;
+    height: 198px;
+    position: absolute;
+    bottom: 0;
+    animation: sea 7s infinite;
+    -moz-animation: sea 7s infinite;
+    -webkit-animation: sea 7s infinite;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0); 
+
+} 
+.wave:nth-of-type(2) {
+
+    animation: sea 7s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+
+  }
+
+@keyframes sea{
+    0% {margin-left:0;}   
+    100% {margin-left:-1600px;}
+  }
+
+@keyframes swell {
+    0%, 100% {
+      transform: translate3d(0,-25px,0);
+    }
+    50% {
+      transform: translate3d(0,5px,0);
+    }
+  }
+
+.cloud{
+    opacity: 0.3;
+    position: absolute;
+} 
+.cloud1{
+    right:-100%;
+    top: 0;
+    animation: clouds1 120s 40s infinite;
+} 
+.cloud2{
+    right:-50%;
+    top:10%;
+    animation: clouds2 120s infinite;
+} 
+.cloud3{
+    right:-10%;
+    top:0;
+    animation: clouds3 120s infinite;
+} 
+.cloud4{
+    right:-80%;
+    top:30%;
+    animation: clouds4 120s infinite;
+} 
+.cloud5{
+    right:-120%;
+    top:250px;
+    animation: clouds5 120s 60s infinite;
+} 
+
+ @keyframes clouds1{
+    0%{right:-100%;}
+    100%{right:150%;}
+}
+@keyframes clouds2{
+    0%{right:-50%;}
+    100%{right:150%;}
+}
+@keyframes clouds3{
+    0%{right:-10%;}
+    100%{right:150%;}
+}
+@keyframes clouds4{
+    0%{right:-80%;}
+    100%{right:150%;}
+}
+@keyframes clouds5{
+    0%{right:-120%;}
+    100%{right:150%;}
+} 
+#fish_css{
+	width: 135px;
+    height: 73px;
+    position: absolute;
+    right:0; bottom:-10%;
+    transform: rotateY(180deg);
+    animation: myfish 50s linear 2s infinite alternate;
+    animation-direction:normal;
+    animation-delay: 3.5s;
+    z-index: -1;
+}
+
+@keyframes myfish{
+    0%   {right:0; bottom:-10%;}
+    25%  {right:10%; bottom:0;}
+    50%  {right:50%; bottom:3%;}
+    75%  {right:75%; bottom:3%;}
+    100% {right:100%;bottom:-10%;}
+}
+
+#fish_top_fin{
+	position: absolute; top: 7px; right:38px;
+	transform:rotateX(60deg);
+	animation: mytop_fin 1s linear 1s infinite alternate; 
+}
+/*top fin animation*/
+@keyframes mytop_fin{
+    0%   {right:38px; top:7px; transform:rotateX(60deg);}
+    25%  {right:38px; top:6.5px; transform:rotateX(45deg);}
+    50%  {right:38px; top:6px; transform:rotateX(30deg);}
+    75%  {right:38px; top:5.5px; transform:rotateX(15deg);}
+    100% {right:38px; top:5px; transform:rotateX(0deg);}
+}
+#fish_head{
+	position: absolute; top: 10px; right:6px;
+	z-index: 100; 
+}
+#fish_tail{
+	position: absolute; top: -2px; left:2px;
+	transform:skewY(20deg);
+	animation: mytail 1s linear 1s infinite alternate;
+}
+/*fish tail animation*/
+@keyframes mytail{
+    0%   {left:2px; top:-2px; transform:skewY(20deg);}
+    25%  {left:2px; top:1px; transform:skewY(15deg);}
+    50%  {left:2px; top:4px; transform:skewY(10deg);}
+    75%  {left:2px; top:7px; transform:skewY(5deg);}
+    100% {left:2px; top:9px; transform:skewY(0deg);}
+}
+#fish_bottom_fin{
+	position: absolute; bottom:11px; right:37px;
+	transform:rotate(30deg);
+	animation: mybottom_fin 1s linear 1s infinite alternate; 
+}
+/*fish bottom fin animation*/
+@keyframes mybottom_fin{
+    0%   {right:37px; bottom:11px; transform:rotate(30deg);}
+    25%  {right:37px; bottom:9px; transform:rotate(20deg);}
+    50%  {right:37px; bottom:7px; transform:rotate(10deg);}
+    75%  {right:37px; bottom:5.5px; transform:rotate(5deg);}
+    100% {right:37px; bottom:6px; transform:rotate(0deg);}
+}
